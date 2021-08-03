@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="stylesheet.css">
+	<title>Starbucks</title>
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="#"><img src="media/logo.png"  class="logo"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="text-box">
+				<h2>It's not just Coffee<br>It's <span class="title">Starbucks</span></h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, in hic,
+					amet repellendus voluptas error, a omnis ex laudantium sed ipsam consequatur dicta? 
+					Ratione quo dignissimos veniam placeat delectus pariatur!</p>
+					<a href="#" class= "btn">Learn More</a>
+			</div>
+			<div class="image-box">
+				<img src="media/img1.png" class="starbucks">
+			</div>
+		</div>
+		<ul class="thumbnail">
+			<li><img src="media/thumb1.png" onmouseover= "changeImage('media/img1.png'); changeCircleColor('#017143')" onclick="changeImage('media/img1.png'); changeCircleColor('#017143')"></li>
+			<li><img src="media/thumb2.png" onmouseover= "changeImage('media/img2.png'); changeCircleColor('#eb7495')" onclick="changeImage('media/img2.png'); changeCircleColor('#eb7495')"></li>
+			<li><img src="media/thumb3.png" onmouseover= "changeImage('media/img3.png'); changeCircleColor('#d752b1')" onclick="changeImage('media/img3.png'); changeCircleColor('#d752b1')"></li>
+		</ul>
+		<ul class="social-media">
+			<li><a href="#"><img src="media/facebook.png"></a></li>
+			<li><a href="#"><img src="media/twitter.png"></a></li>
+			<li><a href="#"><img src="media/instagram.png"></a></li>
+		</ul>
+	</section>
+
+	<script type = "text/javascript">
+		function changeImage(image_source){
+			document.querySelector('.starbucks').src = image_source;
+		}
+
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background =  color;
+			const btn = document.querySelector('.btn');
+			btn.style.background =  color;
+			const title = document.querySelector('.title');
+			title.style.color =  color;
+		}
+
+	</script>
+</body>
+</html>
